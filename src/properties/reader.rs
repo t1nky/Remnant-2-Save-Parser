@@ -560,6 +560,7 @@ impl StructPropertyParser {
             "Timespan" => StructData::Timespan(Timespan::read(reader)?),
             "DateTime" => StructData::DateTime(DateTime::read(reader)?),
             "Vector" => StructData::Vector(FVector::read(reader)?),
+            "Rotator" => StructData::Vector(FVector::read(reader)?),
             _ => StructData::Dynamic(DynamicStruct::read(reader, save_archive)?),
         };
 
